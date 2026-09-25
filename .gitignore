@@ -1,0 +1,29 @@
+# --- Datasets and Heavy Images ---
+*.zip
+*.tar.gz
+*.png
+*.jpg
+*.jpeg
+*.dcm
+
+# --- Data Annotations ---
+*.json
+*.jsonld
+*.xml
+
+# --- AI Models and Weights ---
+*.pt
+*.pth
+*.ckpt
+*.h5
+
+# --- Python Environment & Caches ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+env/
+
+# --- IDE Configs ---
+.vscode/
+.idea/
