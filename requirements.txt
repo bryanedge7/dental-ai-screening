@@ -6,6 +6,8 @@ opencv-python>=4.8.0
 pillow>=10.0.0
 
 # Medical Imaging & Data Processing
+monai>=1.3.0
+albumentations>=1.4.0
 pydicom>=2.4.0
 numpy>=1.24.0
 pandas>=2.0.0
