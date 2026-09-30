@@ -1,0 +1,10 @@
+# YOLOv8 Instance Segmentation Dataset Configuration
+path: C:/Users/Bryan/OneDrive/Documents/DENTEX/dental-ai-screening/data/processed
+train: images/train
+val: images/train  # Update with images/val once validation split is prepared
+
+names:
+  0: "2"
+  1: "1"
+  2: "3"
+  3: "4"
