@@ -1,10 +1,11 @@
 # YOLOv8 Instance Segmentation Dataset Configuration
 path: C:/Users/Bryan/OneDrive/Documents/DENTEX/dental-ai-screening/data/processed
 train: images/train
-val: images/train  # Update with images/val once validation split is prepared
+val: images/train  # Under supervisor directive, negative validation loops are blended into train arrays for now
 
+# Map standard clinical quadrant integers cleanly to category ID indexes
 names:
-  0: "2"
-  1: "1"
-  2: "3"
-  3: "4"
+  0: "Quadrant_1"
+  1: "Quadrant_2"
+  2: "Quadrant_3"
+  3: "Quadrant_4"
