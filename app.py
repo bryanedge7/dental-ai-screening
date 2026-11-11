@@ -52,12 +52,12 @@ st.markdown("""
     .main-title {
         font-size: 2.1rem;
         font-weight: 700;
-        color: #0F172A;
+        color: #FFFFFF !important;
         margin-bottom: 0.2rem;
     }
     .sub-title {
         font-size: 1.05rem;
-        color: #475569;
+        color: #E2E8F0 !important;
         margin-bottom: 1.2rem;
     }
     .metric-card {
