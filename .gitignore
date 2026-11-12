@@ -28,3 +28,10 @@ env/
 # --- IDE Configs ---
 .vscode/
 .idea/
+
+# --- Streamlit Web App Sample Radiographs ---
+!data/processed/images/train/train_0.png
+!data/processed/images/train/train_1.png
+!data/processed/images/train/train_2.png
+!samples/
+!samples/*

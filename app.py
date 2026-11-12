@@ -152,9 +152,25 @@ def load_screening_pipeline():
     return pipeline
 
 
+SAMPLE_DIRS = [
+    os.path.join("data", "processed", "images", "train"),
+    "samples"
+]
+
+
+def get_sample_dir() -> str:
+    """Finds the directory containing sample scans."""
+    for d in SAMPLE_DIRS:
+        if os.path.exists(d):
+            files = [f for f in os.listdir(d) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+            if files:
+                return d
+    return os.path.join("data", "processed", "images", "train")
+
+
 def get_available_sample_scans() -> List[str]:
-    """Finds sample panoramic radiographs in data/processed/images/train."""
-    sample_dir = os.path.join("data", "processed", "images", "train")
+    """Finds sample panoramic radiographs in data/processed/images/train or samples/."""
+    sample_dir = get_sample_dir()
     if os.path.exists(sample_dir):
         files = [f for f in os.listdir(sample_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
         return sorted(files)
@@ -196,10 +212,10 @@ def main():
                 sample_scans,
                 index=0
             )
-            selected_image_path = os.path.join("data", "processed", "images", "train", selected_scan)
+            selected_image_path = os.path.join(get_sample_dir(), selected_scan)
             input_display_name = selected_scan
         else:
-            st.sidebar.warning("No sample scans found in data/processed/images/train.")
+            st.sidebar.warning("No sample scans found in data/processed/images/train or samples/.")
     else:
         uploaded_file = st.sidebar.file_uploader(
             "Upload Panoramic X-ray (PNG, JPG, JPEG):",
