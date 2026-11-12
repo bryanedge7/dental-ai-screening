@@ -18,6 +18,11 @@ data/processed/labels/
 *.ckpt
 *.h5
 
+# --- Whitelisted AI Model Weights (<100MB) for Inference ---
+!runs/segment/runs/stage1_train/quadrant_segmentation/weights/best.pt
+!runs/stage2a_train/weights/best_stage2a.pt
+!yolov8n-seg.pt
+
 # --- Python Environment & Caches ---
 __pycache__/
 *.pyc
